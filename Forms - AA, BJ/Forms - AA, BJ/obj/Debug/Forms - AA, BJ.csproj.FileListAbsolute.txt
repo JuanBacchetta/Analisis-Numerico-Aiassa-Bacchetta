@@ -1,0 +1,11 @@
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\bin\Debug\Forms - AA, BJ.exe.config
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\bin\Debug\Forms - AA, BJ.exe
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\bin\Debug\Forms - AA, BJ.pdb
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms - AA, BJ.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms___AA__BJ.Form1.resources
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms___AA__BJ.Properties.Resources.resources
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms - AA, BJ.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms - AA, BJ.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms - AA, BJ.exe
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms - AA, BJ.pdb
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms___AA__BJ.Unidad_1.resources
