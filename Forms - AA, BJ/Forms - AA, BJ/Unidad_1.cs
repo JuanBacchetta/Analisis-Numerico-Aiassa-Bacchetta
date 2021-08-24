@@ -28,7 +28,12 @@ namespace Forms___AA__BJ
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            Unidad1 U1 = new Unidad1();
+            Salida SalidaAMostrar = U1.Calcular(comboBox1.Text,textBox1.Text,double.Parse(textBox2.Text),double.Parse(textBox3.Text),int.Parse(textBox4.Text),double.Parse(textBox5.Text));
+            textBox6.Text = SalidaAMostrar.Convergencia;
+            textBox7.Text = SalidaAMostrar.Xr;
+            textBox8.Text = SalidaAMostrar.IteracionesRealizadas.ToString();
+            textBox9.Text = SalidaAMostrar.ErrorRelativo.ToString();
         }
         private void Unidad_1_Load(object sender, EventArgs e)
         {
