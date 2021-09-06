@@ -18,6 +18,7 @@ namespace Forms___AA__BJ
             comboBox1.Items.Add("Bisección");
             comboBox1.Items.Add("Regla Falsa");
             comboBox1.Items.Add("Newton-Raphson");
+            comboBox1.Items.Add("Secante");
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private void button1_Click(object sender, EventArgs e)
