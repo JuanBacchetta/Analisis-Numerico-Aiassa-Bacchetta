@@ -201,6 +201,7 @@ namespace Forms___AA__BJ
                         }
                         ArgumentoXr = Xr.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
                         ExpresionXr = new Expression("Funcion(" + ArgumentoXr + ")", Funcion);
+                        var TESTING = ExpresionXr.calculate();
                         if (Math.Abs(ExpresionXr.calculate()) < ToleranciaOK)
                         {
                             Resultado = new Salida("Si, valor de funcion en Xr < Tolerancia", Xr.ToString(), IteracionActual, ErrorRelativo);
@@ -214,8 +215,8 @@ namespace Forms___AA__BJ
                         Xi = Xr;
                         ArgumentoXi = Xi.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
                         ExpresionXi = new Expression("Funcion(" + ArgumentoXi + ")", Funcion);
-                        //VarParaTole = double.Parse(ArgumentoXi) + ToleranciaOK;
-                        //ExpresionTole = new Expression("Funcion(" + VarParaTole.ToString(CultureInfo.CreateSpecificCulture("en-GB")) + ")", Funcion);
+                        VarParaTole = double.Parse(ArgumentoXi.Replace(".",",")) + ToleranciaOK;
+                        ExpresionTole = new Expression("Funcion(" + VarParaTole.ToString(CultureInfo.CreateSpecificCulture("en-GB")) + ")", Funcion);
                         XrAnt = Xr;
                     }
                     Resultado = new Salida("No", "", IteracionActual, ErrorRelativo);
@@ -244,7 +245,6 @@ namespace Forms___AA__BJ
                         if (PrimeraIteracion == 1)
                         {
                             XrAnt = Xr;
-
                         }
                         Xr = (ExpresionXi.calculate() * Xd - ExpresionXd.calculate() * Xi) / (ExpresionXi.calculate() - ExpresionXd.calculate());
                         IteracionActual += 1; // Preguntar donde va esto
@@ -265,7 +265,11 @@ namespace Forms___AA__BJ
                             return Resultado;
                         }
                         Xd = Xi;
+                        ArgumentoXd = Xd.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
+                        ExpresionXd = new Expression("Funcion(" + ArgumentoXd + ")", Funcion);
                         Xi = Xr;
+                        ArgumentoXi = Xi.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
+                        ExpresionXi = new Expression("Funcion(" + ArgumentoXi + ")", Funcion);
                     }
                     Resultado = new Salida("No", "", IteracionActual, ErrorRelativo);
                     return Resultado;
