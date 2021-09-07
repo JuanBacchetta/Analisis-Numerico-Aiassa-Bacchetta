@@ -212,6 +212,10 @@ namespace Forms___AA__BJ
                             return Resultado;
                         }
                         Xi = Xr;
+                        ArgumentoXi = Xi.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
+                        ExpresionXi = new Expression("Funcion(" + ArgumentoXi + ")", Funcion);
+                        //VarParaTole = double.Parse(ArgumentoXi) + ToleranciaOK;
+                        //ExpresionTole = new Expression("Funcion(" + VarParaTole.ToString(CultureInfo.CreateSpecificCulture("en-GB")) + ")", Funcion);
                         XrAnt = Xr;
                     }
                     Resultado = new Salida("No", "", IteracionActual, ErrorRelativo);
