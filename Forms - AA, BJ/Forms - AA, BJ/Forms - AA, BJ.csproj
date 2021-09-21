@@ -97,6 +97,9 @@
     <EmbeddedResource Include="Unidad_1.resx">
       <DependentUpon>Unidad_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Unidad_2.resx">
+      <DependentUpon>Unidad_2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
