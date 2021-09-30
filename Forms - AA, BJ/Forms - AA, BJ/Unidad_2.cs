@@ -65,5 +65,30 @@ namespace Forms___AA__BJ
                 MessageBox.Show(e.ToString());
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 F1 = new Form1();
+            F1.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int j = 0; j < int.Parse(textBox1.Text) + 1; j++)
+            {
+                for (int i = 0; i < int.Parse(textBox1.Text); i++)
+                {
+                    panel1.Controls.Find($"txt{i}{j}", false);
+                    TextBox txt = new TextBox();
+                    txt.Location = new Point(pointX, pointY);
+                    txt.Name = $"txt{i}{j}";
+                    txt.AutoSize = false;
+                    txt.Size = new Size(30, 30);
+                    txt.Font = new Font("Microsoft Sans Serif", 12);
+                    panel1.Controls.Add(txt);
+                }
+            }
+        }
     }
 }
