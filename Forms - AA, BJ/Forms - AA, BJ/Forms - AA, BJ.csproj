@@ -58,6 +58,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unidad1.cs" />
+    <Compile Include="Unidad2.cs" />
     <Compile Include="Unidad_1.cs">
       <SubType>Form</SubType>
     </Compile>
