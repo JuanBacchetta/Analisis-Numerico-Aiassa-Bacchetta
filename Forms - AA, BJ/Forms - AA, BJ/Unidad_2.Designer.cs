@@ -42,6 +42,11 @@ namespace Forms___AA__BJ
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.X1 = new System.Windows.Forms.Label();
+            this.X2 = new System.Windows.Forms.Label();
+            this.X3 = new System.Windows.Forms.Label();
+            this.X4 = new System.Windows.Forms.Label();
+            this.X5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -149,16 +154,61 @@ namespace Forms___AA__BJ
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(173, 286);
+            this.label4.Location = new System.Drawing.Point(173, 389);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 12;
+            // 
+            // X1
+            // 
+            this.X1.AutoSize = true;
+            this.X1.Location = new System.Drawing.Point(1154, 88);
+            this.X1.Name = "X1";
+            this.X1.Size = new System.Drawing.Size(0, 13);
+            this.X1.TabIndex = 13;
+            // 
+            // X2
+            // 
+            this.X2.AutoSize = true;
+            this.X2.Location = new System.Drawing.Point(1154, 111);
+            this.X2.Name = "X2";
+            this.X2.Size = new System.Drawing.Size(0, 13);
+            this.X2.TabIndex = 14;
+            // 
+            // X3
+            // 
+            this.X3.AutoSize = true;
+            this.X3.Location = new System.Drawing.Point(1154, 133);
+            this.X3.Name = "X3";
+            this.X3.Size = new System.Drawing.Size(0, 13);
+            this.X3.TabIndex = 15;
+            // 
+            // X4
+            // 
+            this.X4.AutoSize = true;
+            this.X4.Location = new System.Drawing.Point(1154, 156);
+            this.X4.Name = "X4";
+            this.X4.Size = new System.Drawing.Size(0, 13);
+            this.X4.TabIndex = 16;
+            // 
+            // X5
+            // 
+            this.X5.AutoSize = true;
+            this.X5.Location = new System.Drawing.Point(1154, 177);
+            this.X5.Name = "X5";
+            this.X5.Size = new System.Drawing.Size(0, 13);
+            this.X5.TabIndex = 17;
             // 
             // Unidad_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 490);
+            this.ClientSize = new System.Drawing.Size(1247, 490);
+            this.Controls.Add(this.X5);
+            this.Controls.Add(this.X4);
+            this.Controls.Add(this.X3);
+            this.Controls.Add(this.X2);
+            this.Controls.Add(this.X1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
@@ -194,5 +244,10 @@ namespace Forms___AA__BJ
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label X1;
+        private System.Windows.Forms.Label X2;
+        private System.Windows.Forms.Label X3;
+        private System.Windows.Forms.Label X4;
+        private System.Windows.Forms.Label X5;
     }
 }

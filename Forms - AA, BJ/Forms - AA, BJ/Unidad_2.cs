@@ -45,6 +45,11 @@ namespace Forms___AA__BJ
 
         private void button1_Click(object sender, EventArgs e)
         {
+            X1.Text = "";
+            X2.Text = "";
+            X3.Text = "";
+            X4.Text = "";
+            X5.Text = "";
             try
             {
                 label4.Text = "";
@@ -71,9 +76,27 @@ namespace Forms___AA__BJ
                         txt.Size = new Size(120, 20);
                         txt.Font = new Font("Microsoft Sans Serif", 12);
                         panel1.Controls.Add(txt);
+                        if (j == int.Parse(textBox1.Text) - 1)
+                        {
+                            Label label = new Label();
+                            label.Location = new Point(pointX + 120, pointY);
+                            label.Name = $"IGUAL{j}";
+                            label.AutoSize = false;
+                            label.Size = new Size(10, 20);
+                            label.Font = new Font("Microsoft Sans Serif", 12);
+                            label.Text = "=";
+                            panel1.Controls.Add(label);
+                        }
                         pointY += 50;
                     }
-                    pointX += 140;
+                    if (j == int.Parse(textBox1.Text))
+                    {
+                        pointX += 170;
+                    }
+                    else
+                    {
+                        pointX += 140;
+                    }
                     pointY = 30;
                 }
                 if (comboBox1.Text == "Gauss-Seidel")
@@ -113,6 +136,11 @@ namespace Forms___AA__BJ
 
         private void button2_Click(object sender, EventArgs e)
         {
+            X1.Text = "";
+            X2.Text = "";
+            X3.Text = "";
+            X4.Text = "";
+            X5.Text = "";
             decimal coeficiente = 0;
             int bandera = 0;
             switch (comboBox1.Text)
@@ -232,6 +260,31 @@ namespace Forms___AA__BJ
             if (bandera == 1)
             {
                 label4.Text = "Error al resolver debido a un 0 en el coeficiente, intente pivotear las ecuaciones";
+            }
+            else
+            {
+                if (comboBox1.Text == "Gauss-Jordan")
+                {
+                    for (int i = int.Parse(textBox1.Text); 0 < i; i--)
+                    {
+                        decimal X = 0;
+                        for (int j = int.Parse(textBox1.Text) + 1; 0 < j; j--)
+                        {
+                            if (j == int.Parse(textBox1.Text) + 1)
+                            {
+                                X = decimal.Parse(panel1.Controls.Find($"txt{i-1}{j-1}", false).First().Text);
+                            }
+                            else
+                            {
+                                if (i < j)
+                                {
+                                    X = X - decimal.Parse(panel1.Controls.Find($"txt{i-1}{j-1}", false).First().Text) * decimal.Parse(Controls.Find($"X{j}", false).First().Text);
+                                }
+                            }
+                        }
+                        Controls.Find($"X{i}", false).First().Text = X.ToString();
+                    }
+                }
             }
             //for (int j = 0; j < int.Parse(textBox1.Text) + 1; j++)
             //{
