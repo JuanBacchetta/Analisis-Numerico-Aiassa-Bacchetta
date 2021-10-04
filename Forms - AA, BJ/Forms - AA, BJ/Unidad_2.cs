@@ -141,6 +141,7 @@ namespace Forms___AA__BJ
             X3.Text = "";
             X4.Text = "";
             X5.Text = "";
+            label4.Text = "";
             decimal coeficiente = 0;
             int bandera = 0;
             switch (comboBox1.Text)
