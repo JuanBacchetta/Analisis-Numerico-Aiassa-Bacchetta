@@ -287,21 +287,6 @@ namespace Forms___AA__BJ
                     }
                 }
             }
-            //for (int j = 0; j < int.Parse(textBox1.Text) + 1; j++)
-            //{
-            //    for (int i = 0; i < int.Parse(textBox1.Text); i++)
-            //    {
-            //        Control TxtActual = panel1.Controls.Find($"txt{i}{j}", false).First();
-            //        TxtActual.Text = i.ToString() + ',' + j.ToString();
-            //        //TextBox txt = new TextBox();
-            //        //txt.Location = new Point(pointX, pointY);
-            //        //txt.Name = $"txt{i}{j}";
-            //        //txt.AutoSize = false;
-            //        //txt.Size = new Size(30, 30);
-            //        //txt.Font = new Font("Microsoft Sans Serif", 12);
-            //        //panel1.Controls.Add(txt);
-            //    }
-            //}
         }
     }
 }
