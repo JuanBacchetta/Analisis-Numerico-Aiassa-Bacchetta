@@ -50,22 +50,49 @@ namespace Forms___AA__BJ
         {
             if (comboBox1.Text == "Regresión Lineal")
             {
-                double N = dataGridView1.Rows.Count;
+                double N = dataGridView1.Rows.Count-1;
                 double SumaXi = 0;
                 double SumaXiCuadrado = 0;
                 double SumaYi = 0;
                 double SumaXiYi = 0;
                 foreach (DataGridViewRow Row in dataGridView1.Rows)
                 {
-                    SumaXi = SumaXi + double.Parse(Row.Cells["X"].Value.ToString());
-                    SumaXiCuadrado = SumaXiCuadrado + (double.Parse(Row.Cells["X"].Value.ToString())) * (double.Parse(Row.Cells["X"].Value.ToString()));
-                    SumaYi = SumaYi + double.Parse(Row.Cells["Y"].Value.ToString());
-                    SumaXiYi = SumaXiYi + double.Parse(Row.Cells["X"].Value.ToString()) * double.Parse(Row.Cells["Y"].Value.ToString());
+                    if (Row.Index != N)
+                    {
+                        SumaXi = SumaXi + double.Parse(Row.Cells[0].Value.ToString());
+                        SumaXiCuadrado = SumaXiCuadrado + (double.Parse(Row.Cells[0].Value.ToString())) * (double.Parse(Row.Cells[0].Value.ToString()));
+                        SumaYi = SumaYi + double.Parse(Row.Cells[1].Value.ToString());
+                        SumaXiYi = SumaXiYi + double.Parse(Row.Cells[0].Value.ToString()) * double.Parse(Row.Cells[1].Value.ToString());
+                    }
                 }
                 double Determinante = N * SumaXiCuadrado - Math.Pow(SumaXi,2);
                 double DeterminanteA1 = N * SumaXiYi - SumaXi * SumaYi;
                 double A1 = DeterminanteA1 / Determinante;
                 double A0 = (SumaYi - A1 * SumaXi) / N;
+                double PromedioYi = SumaYi / N;
+                textBox6.Text = "y = " + A1.ToString() + "x + " + A0.ToString();
+                double SumaDiCuadradoRectaHallada = 0;
+                double SumaDiCuadradoRectaPromedioY = 0;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Index != N)
+                    {
+                        double y = A1 * double.Parse(row.Cells[0].Value.ToString()) + A0;
+                        SumaDiCuadradoRectaHallada = SumaDiCuadradoRectaHallada + Math.Pow(Math.Abs(y - double.Parse(row.Cells[1].Value.ToString())), 2);
+                        SumaDiCuadradoRectaPromedioY = SumaDiCuadradoRectaPromedioY + Math.Pow(Math.Abs(y - PromedioYi), 2);
+                    }
+                }
+                double CoeficienteCorrelacion = Math.Sqrt((SumaDiCuadradoRectaPromedioY - SumaDiCuadradoRectaHallada) / SumaDiCuadradoRectaPromedioY);
+                textBox5.Text = CoeficienteCorrelacion.ToString(); //Pasar a porcentaje 0,88 = 88%
+                if (CoeficienteCorrelacion >= 0.8)
+                {
+                    textBox3.Text = "Ajuste Aceptable";
+                }
+                else
+                {
+                    textBox3.Text = "Ajuste insuficiente";
+                }
+
             }
         }
     }
