@@ -46,6 +46,7 @@ namespace Forms___AA__BJ
             this.ColumnaX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnaY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +78,7 @@ namespace Forms___AA__BJ
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(540, 46);
+            this.label4.Location = new System.Drawing.Point(473, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 6;
@@ -85,9 +86,9 @@ namespace Forms___AA__BJ
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(584, 43);
+            this.textBox3.Location = new System.Drawing.Point(517, 43);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 20);
+            this.textBox3.Size = new System.Drawing.Size(248, 20);
             this.textBox3.TabIndex = 7;
             // 
             // label5
@@ -102,7 +103,7 @@ namespace Forms___AA__BJ
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(445, 77);
+            this.label6.Location = new System.Drawing.Point(378, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 13);
             this.label6.TabIndex = 9;
@@ -117,22 +118,22 @@ namespace Forms___AA__BJ
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(584, 73);
+            this.textBox5.Location = new System.Drawing.Point(517, 73);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(248, 20);
             this.textBox5.TabIndex = 11;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(584, 103);
+            this.textBox6.Location = new System.Drawing.Point(517, 103);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.Size = new System.Drawing.Size(248, 20);
             this.textBox6.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(550, 106);
+            this.label7.Location = new System.Drawing.Point(483, 106);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(27, 13);
             this.label7.TabIndex = 13;
@@ -149,7 +150,7 @@ namespace Forms___AA__BJ
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(553, 280);
+            this.button1.Location = new System.Drawing.Point(554, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 99);
             this.button1.TabIndex = 16;
@@ -188,11 +189,21 @@ namespace Forms___AA__BJ
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(771, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "%";
+            // 
             // Unidad_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -234,5 +245,6 @@ namespace Forms___AA__BJ
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaX;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaY;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }

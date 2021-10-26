@@ -78,13 +78,13 @@ namespace Forms___AA__BJ
                     if (row.Index != N)
                     {
                         double y = A1 * double.Parse(row.Cells[0].Value.ToString()) + A0;
-                        SumaDiCuadradoRectaHallada = SumaDiCuadradoRectaHallada + Math.Pow(Math.Abs(y - double.Parse(row.Cells[1].Value.ToString())), 2);
-                        SumaDiCuadradoRectaPromedioY = SumaDiCuadradoRectaPromedioY + Math.Pow(Math.Abs(y - PromedioYi), 2);
+                        SumaDiCuadradoRectaHallada = SumaDiCuadradoRectaHallada + Math.Pow(y - double.Parse(row.Cells[1].Value.ToString()), 2);
+                        SumaDiCuadradoRectaPromedioY = SumaDiCuadradoRectaPromedioY + Math.Pow(double.Parse(row.Cells[1].Value.ToString()) - PromedioYi, 2);
                     }
                 }
-                double CoeficienteCorrelacion = Math.Sqrt((SumaDiCuadradoRectaPromedioY - SumaDiCuadradoRectaHallada) / SumaDiCuadradoRectaPromedioY);
+                double CoeficienteCorrelacion = Math.Sqrt((SumaDiCuadradoRectaPromedioY - SumaDiCuadradoRectaHallada) / SumaDiCuadradoRectaPromedioY) * 100;
                 textBox5.Text = CoeficienteCorrelacion.ToString(); //Pasar a porcentaje 0,88 = 88%
-                if (CoeficienteCorrelacion >= 0.8)
+                if (CoeficienteCorrelacion >= 80)
                 {
                     textBox3.Text = "Ajuste Aceptable";
                 }
@@ -93,6 +93,21 @@ namespace Forms___AA__BJ
                     textBox3.Text = "Ajuste insuficiente";
                 }
 
+            }
+            else
+            {
+                if (comboBox1.Text == "Regresión Polinomial")
+                {
+                    int grado = int.Parse(textBox2.Text);
+                    double[,] Matriz = new double[grado + 1, grado + 2];
+                    for (int j = 0; j < grado; j++)
+                    {
+                        for (int k = 0; k < grado; k++)
+                        {
+                            Matriz[j,k] += 
+                        }
+                    }
+                }
             }
         }
     }
