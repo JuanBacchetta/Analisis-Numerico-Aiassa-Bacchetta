@@ -47,6 +47,17 @@ namespace Forms___AA__BJ
             this.ColumnaY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.X0X = new System.Windows.Forms.Label();
+            this.X1X = new System.Windows.Forms.Label();
+            this.X2X = new System.Windows.Forms.Label();
+            this.X3X = new System.Windows.Forms.Label();
+            this.X4X = new System.Windows.Forms.Label();
+            this.X5X = new System.Windows.Forms.Label();
+            this.X6X = new System.Windows.Forms.Label();
+            this.X7X = new System.Windows.Forms.Label();
+            this.X8X = new System.Windows.Forms.Label();
+            this.X9X = new System.Windows.Forms.Label();
+            this.X10X = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,11 +209,110 @@ namespace Forms___AA__BJ
             this.label1.TabIndex = 20;
             this.label1.Text = "%";
             // 
+            // X0X
+            // 
+            this.X0X.AutoSize = true;
+            this.X0X.Location = new System.Drawing.Point(298, 158);
+            this.X0X.Name = "X0X";
+            this.X0X.Size = new System.Drawing.Size(0, 13);
+            this.X0X.TabIndex = 21;
+            // 
+            // X1X
+            // 
+            this.X1X.AutoSize = true;
+            this.X1X.Location = new System.Drawing.Point(298, 187);
+            this.X1X.Name = "X1X";
+            this.X1X.Size = new System.Drawing.Size(0, 13);
+            this.X1X.TabIndex = 22;
+            // 
+            // X2X
+            // 
+            this.X2X.AutoSize = true;
+            this.X2X.Location = new System.Drawing.Point(298, 218);
+            this.X2X.Name = "X2X";
+            this.X2X.Size = new System.Drawing.Size(0, 13);
+            this.X2X.TabIndex = 23;
+            // 
+            // X3X
+            // 
+            this.X3X.AutoSize = true;
+            this.X3X.Location = new System.Drawing.Point(298, 243);
+            this.X3X.Name = "X3X";
+            this.X3X.Size = new System.Drawing.Size(0, 13);
+            this.X3X.TabIndex = 24;
+            // 
+            // X4X
+            // 
+            this.X4X.AutoSize = true;
+            this.X4X.Location = new System.Drawing.Point(473, 158);
+            this.X4X.Name = "X4X";
+            this.X4X.Size = new System.Drawing.Size(0, 13);
+            this.X4X.TabIndex = 25;
+            // 
+            // X5X
+            // 
+            this.X5X.AutoSize = true;
+            this.X5X.Location = new System.Drawing.Point(473, 187);
+            this.X5X.Name = "X5X";
+            this.X5X.Size = new System.Drawing.Size(0, 13);
+            this.X5X.TabIndex = 26;
+            // 
+            // X6X
+            // 
+            this.X6X.AutoSize = true;
+            this.X6X.Location = new System.Drawing.Point(473, 218);
+            this.X6X.Name = "X6X";
+            this.X6X.Size = new System.Drawing.Size(0, 13);
+            this.X6X.TabIndex = 27;
+            // 
+            // X7X
+            // 
+            this.X7X.AutoSize = true;
+            this.X7X.Location = new System.Drawing.Point(473, 243);
+            this.X7X.Name = "X7X";
+            this.X7X.Size = new System.Drawing.Size(0, 13);
+            this.X7X.TabIndex = 28;
+            // 
+            // X8X
+            // 
+            this.X8X.AutoSize = true;
+            this.X8X.Location = new System.Drawing.Point(658, 158);
+            this.X8X.Name = "X8X";
+            this.X8X.Size = new System.Drawing.Size(0, 13);
+            this.X8X.TabIndex = 29;
+            // 
+            // X9X
+            // 
+            this.X9X.AutoSize = true;
+            this.X9X.Location = new System.Drawing.Point(658, 187);
+            this.X9X.Name = "X9X";
+            this.X9X.Size = new System.Drawing.Size(0, 13);
+            this.X9X.TabIndex = 30;
+            // 
+            // X10X
+            // 
+            this.X10X.AutoSize = true;
+            this.X10X.Location = new System.Drawing.Point(658, 218);
+            this.X10X.Name = "X10X";
+            this.X10X.Size = new System.Drawing.Size(0, 13);
+            this.X10X.TabIndex = 31;
+            // 
             // Unidad_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.X10X);
+            this.Controls.Add(this.X9X);
+            this.Controls.Add(this.X8X);
+            this.Controls.Add(this.X7X);
+            this.Controls.Add(this.X6X);
+            this.Controls.Add(this.X5X);
+            this.Controls.Add(this.X4X);
+            this.Controls.Add(this.X3X);
+            this.Controls.Add(this.X2X);
+            this.Controls.Add(this.X1X);
+            this.Controls.Add(this.X0X);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -246,5 +356,16 @@ namespace Forms___AA__BJ
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaY;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label X0X;
+        private System.Windows.Forms.Label X1X;
+        private System.Windows.Forms.Label X2X;
+        private System.Windows.Forms.Label X3X;
+        private System.Windows.Forms.Label X4X;
+        private System.Windows.Forms.Label X5X;
+        private System.Windows.Forms.Label X6X;
+        private System.Windows.Forms.Label X7X;
+        private System.Windows.Forms.Label X8X;
+        private System.Windows.Forms.Label X9X;
+        private System.Windows.Forms.Label X10X;
     }
 }

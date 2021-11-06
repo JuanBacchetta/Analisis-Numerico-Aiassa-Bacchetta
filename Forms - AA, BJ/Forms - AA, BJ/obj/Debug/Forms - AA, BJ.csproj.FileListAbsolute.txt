@@ -12,3 +12,5 @@ C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\
 C:\Users\Usuario\Source\Repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\bin\Debug\MathParser.org-mXparser.dll
 C:\Users\Usuario\Source\Repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms___AA__BJ.Unidad_2.resources
 C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms___AA__BJ.Unidad_3.resources
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms___AA__BJ.Unidad_4.resources
+C:\Users\Usuario\source\repos\Analisis-Numerico-Aiassa-Bacchetta\Forms - AA, BJ\Forms - AA, BJ\obj\Debug\Forms - AA, BJ.csproj.CopyComplete
