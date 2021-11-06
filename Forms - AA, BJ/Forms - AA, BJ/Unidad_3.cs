@@ -48,9 +48,9 @@ namespace Forms___AA__BJ
 
         private void button2_Click(object sender, EventArgs e)
         {
+            double N = dataGridView1.Rows.Count - 1;
             if (comboBox1.Text == "Regresión Lineal")
             {
-                double N = dataGridView1.Rows.Count-1;
                 double SumaXi = 0;
                 double SumaXiCuadrado = 0;
                 double SumaYi = 0;
@@ -100,11 +100,60 @@ namespace Forms___AA__BJ
                 {
                     int grado = int.Parse(textBox2.Text);
                     double[,] Matriz = new double[grado + 1, grado + 2];
-                    for (int j = 0; j < grado; j++)
+                    foreach (DataGridViewRow Row in dataGridView1.Rows)
                     {
-                        for (int k = 0; k < grado; k++)
+                        if (Row.Index != N)
                         {
-                            Matriz[j,k] += 
+                            for (int j = 0; j < grado; j++)
+                            {
+                                for (int k = 0; k < grado; k++)
+                                {
+                                    Matriz[j, k] += Math.Pow(double.Parse(Row.Cells[0].Value.ToString()), j + k);
+                                }
+                            }
+                        }
+                    }
+                    for (int k = 0; k < grado; k++)
+                    {
+                        int bandera = 0;
+                        for (int i = k; i < grado; i++)
+                        {
+                            double coeficiente = 9999999;
+                            int flag = 0;
+                            double NumeroParaHacer0ElTrianguloInferior = 0;
+                            for (int j = k; j < grado + 1; j++)
+                            {
+                                if (i == j && i == k)
+                                {
+                                    coeficiente = Matriz[i, j];
+                                }
+                                if (i == k)
+                                {
+                                    if (coeficiente == 0)
+                                    {
+                                        bandera = 1;
+                                        break;
+                                    }
+                                    Matriz[i,j] = Matriz[i,j] / coeficiente;
+                                }
+                                else
+                                {
+                                    if (flag == 0)
+                                    {
+                                        flag = 1;
+                                        NumeroParaHacer0ElTrianguloInferior = Matriz[i,k];
+                                    }
+                                    Matriz[i,j] = Matriz[i,j] + Matriz[k,j] * NumeroParaHacer0ElTrianguloInferior * -1;
+                                }
+                            }
+                            if (bandera == 1)
+                            {
+                                break;
+                            }
+                        }
+                        if (bandera == 1)
+                        {
+                            break;
                         }
                     }
                 }
