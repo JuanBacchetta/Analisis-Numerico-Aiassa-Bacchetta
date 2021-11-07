@@ -37,13 +37,17 @@ namespace Forms___AA__BJ
             Function Funcion = new Function("Funcion(x) =" + textBox1.Text);
             Expression ExpresionXi = new Expression("Funcion(" + textBox2.Text.Replace(",", ".") + ")", Funcion);
             Expression ExpresionXf = new Expression("Funcion(" + textBox3.Text.Replace(",", ".") + ")", Funcion);
-            double h = (double.Parse(textBox3.Text.Replace(".", ",")) - double.Parse(textBox2.Text.Replace(".", ","))) / double.Parse(textBox4.Text);
             if (comboBox1.Text == "Trapecio Simple")
             {
+                var sarasa = ExpresionXi.calculate();
+                var error1 = ExpresionXi.getErrorMessage();
+                var sarasasarasa = ExpresionXf.calculate();
+                var error2 = ExpresionXf.getErrorMessage();
                 textBox5.Text = (((ExpresionXf.calculate() + ExpresionXi.calculate()) * (double.Parse(textBox3.Text.Replace(".", ",")) - double.Parse(textBox2.Text.Replace(".", ","))) / 2).ToString());
             }
             if (comboBox1.Text == "Trapecio Multiple")
             {
+                double h = (double.Parse(textBox3.Text.Replace(".", ",")) - double.Parse(textBox2.Text.Replace(".", ","))) / double.Parse(textBox4.Text);
                 textBox5.Text = "0";
                 for (int i = 1; i < int.Parse(textBox4.Text); i++)
                 {
@@ -56,12 +60,13 @@ namespace Forms___AA__BJ
             }
             if (comboBox1.Text == "Simpson 1/3 Simple")
             {
-                h = (double.Parse(textBox3.Text.Replace(".", ",")) - double.Parse(textBox2.Text.Replace(".", ",")))/2;
+                double h = (double.Parse(textBox3.Text.Replace(".", ",")) - double.Parse(textBox2.Text.Replace(".", ",")))/2;
                 Expression expresionXPromedio = new Expression("Funcion(" + ((double.Parse(textBox2.Text.Replace(".", ",")) + double.Parse(textBox3.Text.Replace(".", ",")))/2).ToString().Replace(",", ".") + ")", Funcion);
                 textBox5.Text = ((h / 3) * (ExpresionXi.calculate() + 4 * expresionXPromedio.calculate() + ExpresionXf.calculate())).ToString().Replace(".", ",");
             }
             if (comboBox1.Text == "Simpson 1/3 Multiple")
             {
+                double h = (double.Parse(textBox3.Text.Replace(".", ",")) - double.Parse(textBox2.Text.Replace(".", ","))) / double.Parse(textBox4.Text);
                 if (Math.Floor(double.Parse(textBox4.Text)/2) == double.Parse(textBox4.Text)/2)
                 {
                     textBox5.Text = "0";
@@ -81,6 +86,7 @@ namespace Forms___AA__BJ
             }
             if (comboBox1.Text == "Simpson 3/8")
             {
+                double h = (double.Parse(textBox3.Text.Replace(".", ",")) - double.Parse(textBox2.Text.Replace(".", ","))) / double.Parse(textBox4.Text);
                 if (Math.Floor(double.Parse(textBox4.Text) / 2) != double.Parse(textBox4.Text) / 2 && double.Parse(textBox4.Text) >= 3)
                 {
                     textBox5.Text = "0";
